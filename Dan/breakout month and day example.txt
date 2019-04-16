@@ -1,0 +1,33 @@
+#create new columns
+newdccrimes_df = dccrimes_df[['LONGITUDE', 'LATITUDE', 'offense-text','OFFENSE', 'REPORT_DAT']]
+newdccrimes_df.head()
+
+# clean up date to make it just month and day
+dates = []
+dates = newdccrimes_df['REPORT_DAT'].values
+dates [1]
+
+# get the month
+MM = []
+for d in dates:
+    MM.append(d[5:7])
+print(MM)
+
+#get the day
+DD = []
+for d in dates:
+    DD.append(d[8:10])
+print(DD)
+
+#create the MONTH column and populate (you'll get an error but it works)
+newdccrimes_df["MONTH"]=MM
+
+#create the DAY column and populate (you'll get an error but it works)
+newdccrimes_df["DAY"]=DD
+
+#create new columns
+finaldccrimes_df = newdccrimes_df[['LONGITUDE', 'LATITUDE', 'offense-text','OFFENSE', 'MONTH', 'DAY']]
+finaldccrimes_df.head()
+
+#Chck the output
+finaldccrimes_df.head()

@@ -1,0 +1,9 @@
+
+# File extension to ignore for this project
+*.csv
+
+# Don't upload the checkpoints
+ipynb_checkpoints
+
+#junk files
+*.DS_Store
