@@ -3,7 +3,7 @@
 *.csv
 
 # Don't upload the checkpoints
-ipynb_checkpoints
+.ipynb_checkpoints
 
 #junk files
 *.DS_Store
