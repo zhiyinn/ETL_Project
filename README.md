@@ -23,3 +23,12 @@ New York:
 Washington D.C.:
 [Crime Data](https://datagate.dc.gov/search/open/crimes?daterange=1-1-2018,12-31-2018&details=true&format=csv)
 [Parking Data](https://www.kaggle.com/arcgisopendata/dc-parking-violations)
+
+##Extract
+Extract is the process of reading data from a database. In our extract stage, we collected data from the above sources and read in our files into Python notebooks and Pandas dataframes from CSV formats. 
+
+##Transform 
+In this step, we modified our dataframes to convert the extracted data so that it can be placed in a new database. To do this, we selected for variables we had expressed interest in, removed rows with blank or null cells, refined the output to create common values we could potentially merge on, and renamed column names to more clearly define context of the data fields. 
+
+##Load 
+In the last step of this process, we used SQLAlchemy to create a database and push cleaned data in tables in SQL. 
